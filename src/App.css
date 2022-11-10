@@ -87,7 +87,7 @@ li span {
 
 
 /* Media Width */
-@media (max-width: 1028px) {
+@media (max-width: 800px) {
 
   .title {
     background-image: url(/public/food-bg-media.jpg);

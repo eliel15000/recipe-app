@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
-// import logo from "./logo.svg";
 import "./App.css";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>Hello React</h1>
-//     </div>
-//   );
-// }
 
 const App = () => {
   const APP_ID = "9a6a3a21";
