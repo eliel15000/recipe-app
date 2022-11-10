@@ -66,17 +66,27 @@ const App = () => {
 
   return (
     <div className="App">
-      <form className="search-form" onSubmit={getSearch}>
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-        />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
+      <div className="title">
+        <div className="titleHeadings">
+          <h1 className="titleH1">Welcome to Desired Recipes!</h1>
+          <h2 className="titleH2">
+            Where you can find nice recipes about whatever you want!!!
+          </h2>
+        </div>
+        <form className="search-form" onSubmit={getSearch}>
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            onChange={updateSearch}
+            placeholder="e.g. banana, chicken, and cake"
+          />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+        <div></div>
+      </div>
       <div className="recipes">
         {recipes.map((recipeHit, index) => (
           <Recipe
@@ -88,6 +98,9 @@ const App = () => {
             keyGenerator={generateKey}
           />
         ))}
+      </div>
+      <div className="footer">
+        <p>© Copyright 2022 EliezerCoding</p>
       </div>
     </div>
   );

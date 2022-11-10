@@ -1,16 +1,41 @@
-li {
+/* li {
   color: lightcoral;
   margin-right: 15px;
 }
 
 li span {
   color: black;
-}
+} */
 
 .App {
   min-height: 100vh;
   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-  padding-top: 20px;
+  font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: black;
+  /* padding-top: 20px; */
+}
+
+.title {
+  background-image: url(/public/food-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1rem;
+  padding: 7% 15%;
+}
+
+.titleHeadings {
+  padding-right: 20%;
+  color: white;
+}
+
+.title h1 {
+  font-size: 3.5rem;
+}
+
+.title h2 {
+  font-size: 2.2rem;
 }
 
 .search-form {
@@ -22,6 +47,8 @@ li span {
 
 .search-bar {
   width: 50%;
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
   border: 1px solid black;
   border-radius: 3px;
   padding: 10px;
@@ -35,13 +62,25 @@ li span {
   margin-left: 10px;
   color: white;
   border-radius: 4px;
-  /* margin-top: 20px; */
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
 }
 
-
+.search-button:hover {
+  background: #cf4545;
+}
 
 .recipes {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
 }

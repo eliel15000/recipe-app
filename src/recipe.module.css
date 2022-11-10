@@ -1,3 +1,13 @@
+li {
+    color: lightcoral;
+    margin-right: 15px;
+}
+
+li span {
+    font-size: 20px;
+    color: black;
+}
+
 .recipe {
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgb(71, 71, 71);
@@ -25,4 +35,5 @@
 .caloriesP {
     font-size: large;
     font-weight: bold;
+    font-size: 24px;
 }
