@@ -84,3 +84,34 @@ li span {
   padding: 2rem;
   margin-top: 2rem;
 }
+
+
+/* Media Width */
+@media (max-width: 1028px) {
+
+  .title {
+    background-image: url(/public/food-bg-media.jpg);
+  }
+
+  .titleHeadings {
+    padding: 0%;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .title h2 {
+    font-size: 1.2rem;
+  }
+
+  .search-bar {
+    width: 75%;
+    font-size: 1rem;
+  }
+
+  .search-button {
+    font-size: 1rem;
+  }
+
+}
