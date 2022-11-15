@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
 import "./App.css";
+// require("dotenv/config");
 
 const App = () => {
-  const APP_ID = "9a6a3a21";
-  const APP_KEY = "dc5f611bbc2a2cb043043b4c8ed60d01";
-  // const exmapleReq = `https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
-
   // A way to create an state
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
@@ -30,7 +27,7 @@ const App = () => {
   //-- Call for the data (fetch)
   const getRecipes = async () => {
     const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`
     );
     //-- Put the wanted data in a variable
     const data = await response.json();
