@@ -4,11 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 // require("dotenv/config");
 
-import Title from "./components/Title";
+// import Title from "./components/Title";
 import Recipes from "./components/Recipes";
 import Footer from "./components/Footer";
-import useQuery from "./hooks/useQuery";
-import useRecipes from "./hooks/useRecipes";
 
 const App = () => {
   // A way to create an state
@@ -112,7 +110,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Title />
+      {/* <Title /> */}
       <Recipes />
       <Footer />
     </div>

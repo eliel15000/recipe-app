@@ -1,25 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
-import useRecipes from "../hooks/useRecipes";
-import useQuery from "../hooks/useQuery";
-
-// export function useQuery() {
-//   const [query, setQuery] = useState("banana");
-
-//   useEffect(() => {
-//     setQuery(query);
-//     getRecipes();
-//     console.log("query updated");
-//   }, [query]);
-
-//   return [query, setQuery];
-// }
+import Title from "./Title";
 
 const Recipes = () => {
-  //   const [recipes, setRecipes] = useRecipes();
   const [recipes, setRecipes] = useState([]);
-  const [query, setQuery] = useQuery();
-  //   const [query, setQuery] = useState("banana");
+  const [query, setQuery] = useState("banana");
 
   useEffect(() => {
     getRecipes();
@@ -33,11 +18,13 @@ const Recipes = () => {
     //-- Put the wanted data in a variable
     const data = await response.json();
     console.log("Recipes.js " + query);
-    console.log(query);
+    // console.log(query);
     console.log(data.hits);
-    console.log("Recipes.js " + query);
     setRecipes(data.hits);
-    console.log("Recipes.js " + query);
+  };
+
+  const handleCallback = (childInput) => {
+    setQuery(childInput);
   };
 
   const generateKey = (label) => {
@@ -48,6 +35,8 @@ const Recipes = () => {
 
   return (
     <section>
+      <Title parentCallback={handleCallback} />
+
       <div className="container-fluid recipes">
         {recipes.map((recipeHit, index) => (
           <Recipe

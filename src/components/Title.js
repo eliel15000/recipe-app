@@ -1,31 +1,12 @@
-import React, { useEffect, useState } from "react";
-import useQuery from "../hooks/useQuery";
-import useRecipes from "../hooks/useRecipes";
+import React, { useState } from "react";
 
-const Title = () => {
+const Title = ({ parentCallback }) => {
   const [search, setSearch] = useState("");
-  //   const [recipes, setRecipes] = useRecipes();
-  const [query, setQuery] = useQuery("name", "banana");
-  //   const [query, setQuery] = useState("banana");
-
-  //   useEffect(() => {
-  //     getRecipes();
-  //   }, [query]);
-
-  //   const getRecipes = async () => {
-  //     const response = await fetch(
-  //       `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`
-  //     );
-  //     //-- Put the wanted data in a variable
-  //     const data = await response.json();
-  //     console.log(query);
-  //     console.log(data.hits);
-  //     setRecipes(data.hits);
-  //   };
 
   const getSearch = (e) => {
     e.preventDefault();
-    setQuery(search);
+    // setQuery(search);
+    parentCallback(search);
     setSearch("");
   };
 
