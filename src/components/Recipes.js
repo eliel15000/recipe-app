@@ -8,7 +8,6 @@ const Recipes = () => {
 
   useEffect(() => {
     getRecipes();
-    console.log("new query in Recipes.js " + query);
   }, [query]);
 
   const getRecipes = async () => {
