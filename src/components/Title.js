@@ -5,7 +5,6 @@ const Title = ({ parentCallback }) => {
 
   const getSearch = (e) => {
     e.preventDefault();
-    // setQuery(search);
     parentCallback(search);
     setSearch("");
   };

@@ -7,7 +7,7 @@ const Recipes = () => {
   const [query, setQuery] = useState("banana");
 
   useEffect(() => {
-    // getRecipes();
+    getRecipes();
     console.log("new query in Recipes.js " + query);
   }, [query]);
 
@@ -15,11 +15,8 @@ const Recipes = () => {
     const response = await fetch(
       `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${process.env.REACT_APP_ID}&app_key=${process.env.REACT_APP_KEY}`
     );
-    //-- Put the wanted data in a variable
     const data = await response.json();
-    console.log("Recipes.js " + query);
-    // console.log(query);
-    console.log(data.hits);
+    // console.log(data.hits);
     setRecipes(data.hits);
   };
 

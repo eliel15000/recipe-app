@@ -6,8 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  // Let's see, <React.StrictMode> makes the "useEffect" run twice...
-
   // <React.StrictMode>
   <App />
   // </React.StrictMode>
