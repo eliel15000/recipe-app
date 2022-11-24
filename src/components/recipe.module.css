@@ -18,6 +18,7 @@ li span {
     background: white;
     align-items: center;
     min-width: 40%;
+    padding: 20px 20px 5px;
 }
 
 .image {
@@ -30,10 +31,11 @@ li span {
 .title {
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
 }
 
 .caloriesP {
-    font-size: large;
     font-weight: bold;
     font-size: 24px;
 }

@@ -33,6 +33,7 @@ const Title = ({ parentCallback }) => {
               value={search}
               placeholder="e.g. banana, chicken, and cake"
               onChange={updateSearch}
+              required
             />
             <div className="input-group-append input-group-lg">
               <button className="btn btn-danger" type="submit" id="submit">

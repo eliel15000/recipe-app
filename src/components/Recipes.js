@@ -7,7 +7,7 @@ const Recipes = () => {
   const [query, setQuery] = useState("banana");
 
   useEffect(() => {
-    getRecipes();
+    // getRecipes();
     console.log("new query in Recipes.js " + query);
   }, [query]);
 
